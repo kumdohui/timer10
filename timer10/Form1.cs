@@ -32,22 +32,42 @@ namespace timer10
             Sec_textbox.Text = (time % 60).ToString();
             if (time == 0)
             {
-                {
-                    timer1.Stop();
-                    Start_stop_button.Text = "Start";
-                    flag = false;
+                
+                timer1.Stop();
+                Start_stop_button.Text = "Start";
+                flag = false;
 
-                    time = set_time;
+                time = set_time;
 
                     // 비동기적으로 사운드 재생
-                    await PlaySoundAsync();
-                    MessageBox.Show("타임오버!");
+                await PlaySoundAsync();
+                MessageBox.Show("타임오버!");
 
 
-                }
-                time--;
+            }
+            time--;
 
+        }
+        private async Task PlaySoundAsync()
+        {
+            await Task.Run(() => player.Play());
+        }
+
+        private void Start_stop_button_Click(object sender, EventArgs e)
+        {
+            if (flag == false)
+            {
+                timer1.Start();     // 타이머 시작
+                flag = true;
+                Start_stop_button.Text = "Stop";
+            }
+            else
+            {
+                timer1.Stop();      // 타이머 멈춤
+                flag = false;
+                Start_stop_button.Text = "Start";
             }
         }
     }
 }
+

@@ -1,6 +1,6 @@
 ﻿namespace timer10
 {
-    partial class Form1
+    partial class Timer
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -28,13 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.Hour_textBox = new System.Windows.Forms.TextBox();
+            this.Sec_textBox = new System.Windows.Forms.TextBox();
+            this.Minite_textbox = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // Hour_textBox
+            // 
+            this.Hour_textBox.Location = new System.Drawing.Point(80, 186);
+            this.Hour_textBox.Name = "Hour_textBox";
+            this.Hour_textBox.Size = new System.Drawing.Size(100, 25);
+            this.Hour_textBox.TabIndex = 0;
+            this.Hour_textBox.Text = "0";
+            this.Hour_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Sec_textBox
+            // 
+            this.Sec_textBox.Location = new System.Drawing.Point(599, 186);
+            this.Sec_textBox.Name = "Sec_textBox";
+            this.Sec_textBox.Size = new System.Drawing.Size(100, 25);
+            this.Sec_textBox.TabIndex = 1;
+            this.Sec_textBox.Text = "0";
+            this.Sec_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Minite_textbox
+            // 
+            this.Minite_textbox.Location = new System.Drawing.Point(343, 186);
+            this.Minite_textbox.Name = "Minite_textbox";
+            this.Minite_textbox.Size = new System.Drawing.Size(100, 25);
+            this.Minite_textbox.TabIndex = 2;
+            this.Minite_textbox.Text = "0";
+            this.Minite_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Timer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.Minite_textbox);
+            this.Controls.Add(this.Sec_textBox);
+            this.Controls.Add(this.Hour_textBox);
+            this.Name = "Timer";
+            this.Text = "Timer";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox Hour_textBox;
+        private System.Windows.Forms.TextBox Sec_textBox;
+        private System.Windows.Forms.TextBox Minite_textbox;
     }
 }
 

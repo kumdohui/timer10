@@ -142,6 +142,7 @@
             this.Reset_button.TabIndex = 10;
             this.Reset_button.Text = "Reset";
             this.Reset_button.UseVisualStyleBackColor = true;
+            this.Reset_button.Click += new System.EventHandler(this.Reset_button_Click);
             // 
             // timer1
             // 

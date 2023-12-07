@@ -68,6 +68,16 @@ namespace timer10
                 Start_stop_button.Text = "Start";
             }
         }
+
+        private void Reset_button_Click(object sender, EventArgs e)
+        {
+            player.Stop();
+            Hour_textbox.Text = (set_time / 3600).ToString();
+            Minute_textbox.Text = ((set_time % 3600) / 60).ToString();
+            Sec_textbox.Text = (set_time % 60).ToString();
+            time = set_time;
+
+        }
     }
 }
 

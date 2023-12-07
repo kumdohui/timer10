@@ -36,6 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Start_stop_button = new System.Windows.Forms.Button();
+            this.Set_button = new System.Windows.Forms.Button();
+            this.Reset_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Hour_textBox
@@ -110,11 +113,41 @@
             this.label5.TabIndex = 7;
             this.label5.Text = ":";
             // 
+            // Start_stop_button
+            // 
+            this.Start_stop_button.Location = new System.Drawing.Point(80, 314);
+            this.Start_stop_button.Name = "Start_stop_button";
+            this.Start_stop_button.Size = new System.Drawing.Size(100, 39);
+            this.Start_stop_button.TabIndex = 8;
+            this.Start_stop_button.Text = "Start";
+            this.Start_stop_button.UseVisualStyleBackColor = true;
+            // 
+            // Set_button
+            // 
+            this.Set_button.Location = new System.Drawing.Point(343, 314);
+            this.Set_button.Name = "Set_button";
+            this.Set_button.Size = new System.Drawing.Size(101, 39);
+            this.Set_button.TabIndex = 9;
+            this.Set_button.Text = "Set";
+            this.Set_button.UseVisualStyleBackColor = true;
+            // 
+            // Reset_button
+            // 
+            this.Reset_button.Location = new System.Drawing.Point(599, 314);
+            this.Reset_button.Name = "Reset_button";
+            this.Reset_button.Size = new System.Drawing.Size(101, 39);
+            this.Reset_button.TabIndex = 10;
+            this.Reset_button.Text = "Reset";
+            this.Reset_button.UseVisualStyleBackColor = true;
+            // 
             // Timer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Reset_button);
+            this.Controls.Add(this.Set_button);
+            this.Controls.Add(this.Start_stop_button);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -140,6 +173,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Start_stop_button;
+        private System.Windows.Forms.Button Set_button;
+        private System.Windows.Forms.Button Reset_button;
     }
 }
 

@@ -109,6 +109,10 @@ namespace timer10
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("\n예기치않은 오류입니다\n다시시도해주세요" + ex.ToString(), "Exception Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
         }
     } 
 }

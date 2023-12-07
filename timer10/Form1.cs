@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics; 
 using System.Media;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace timer10
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private async Task timer1_TickAsync(object sender, EventArgs e)
         {
             Hour_textbox.Text = (time / 3600).ToString();
             Minute_textbox.Text = ((time % 3600) / 60).ToString();

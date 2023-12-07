@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Hour_textBox = new System.Windows.Forms.TextBox();
             this.Sec_textBox = new System.Windows.Forms.TextBox();
             this.Minite_textbox = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@
             this.Start_stop_button = new System.Windows.Forms.Button();
             this.Set_button = new System.Windows.Forms.Button();
             this.Reset_button = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // Hour_textBox
@@ -140,6 +142,10 @@
             this.Reset_button.Text = "Reset";
             this.Reset_button.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // Timer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -176,6 +182,7 @@
         private System.Windows.Forms.Button Start_stop_button;
         private System.Windows.Forms.Button Set_button;
         private System.Windows.Forms.Button Reset_button;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

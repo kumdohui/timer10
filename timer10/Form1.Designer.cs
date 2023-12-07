@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Hour_textBox = new System.Windows.Forms.TextBox();
-            this.Sec_textBox = new System.Windows.Forms.TextBox();
-            this.Minite_textbox = new System.Windows.Forms.TextBox();
+            this.Hour_textbox = new System.Windows.Forms.TextBox();
+            this.Sec_textbox = new System.Windows.Forms.TextBox();
+            this.Minute_textbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,32 +43,32 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // Hour_textBox
+            // Hour_textbox
             // 
-            this.Hour_textBox.Location = new System.Drawing.Point(80, 186);
-            this.Hour_textBox.Name = "Hour_textBox";
-            this.Hour_textBox.Size = new System.Drawing.Size(100, 25);
-            this.Hour_textBox.TabIndex = 0;
-            this.Hour_textBox.Text = "0";
-            this.Hour_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Hour_textbox.Location = new System.Drawing.Point(80, 186);
+            this.Hour_textbox.Name = "Hour_textbox";
+            this.Hour_textbox.Size = new System.Drawing.Size(100, 25);
+            this.Hour_textbox.TabIndex = 0;
+            this.Hour_textbox.Text = "0";
+            this.Hour_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Sec_textBox
+            // Sec_textbox
             // 
-            this.Sec_textBox.Location = new System.Drawing.Point(599, 186);
-            this.Sec_textBox.Name = "Sec_textBox";
-            this.Sec_textBox.Size = new System.Drawing.Size(100, 25);
-            this.Sec_textBox.TabIndex = 1;
-            this.Sec_textBox.Text = "0";
-            this.Sec_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Sec_textbox.Location = new System.Drawing.Point(599, 186);
+            this.Sec_textbox.Name = "Sec_textbox";
+            this.Sec_textbox.Size = new System.Drawing.Size(100, 25);
+            this.Sec_textbox.TabIndex = 1;
+            this.Sec_textbox.Text = "0";
+            this.Sec_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Minite_textbox
+            // Minute_textbox
             // 
-            this.Minite_textbox.Location = new System.Drawing.Point(343, 186);
-            this.Minite_textbox.Name = "Minite_textbox";
-            this.Minite_textbox.Size = new System.Drawing.Size(100, 25);
-            this.Minite_textbox.TabIndex = 2;
-            this.Minite_textbox.Text = "0";
-            this.Minite_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Minute_textbox.Location = new System.Drawing.Point(343, 186);
+            this.Minute_textbox.Name = "Minute_textbox";
+            this.Minute_textbox.Size = new System.Drawing.Size(100, 25);
+            this.Minute_textbox.TabIndex = 2;
+            this.Minute_textbox.Text = "0";
+            this.Minute_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -145,6 +145,7 @@
             // timer1
             // 
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Timer
             // 
@@ -159,9 +160,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Minite_textbox);
-            this.Controls.Add(this.Sec_textBox);
-            this.Controls.Add(this.Hour_textBox);
+            this.Controls.Add(this.Minute_textbox);
+            this.Controls.Add(this.Sec_textbox);
+            this.Controls.Add(this.Hour_textbox);
             this.Name = "Timer";
             this.Text = "Timer";
             this.ResumeLayout(false);
@@ -171,9 +172,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Hour_textBox;
-        private System.Windows.Forms.TextBox Sec_textBox;
-        private System.Windows.Forms.TextBox Minite_textbox;
+        private System.Windows.Forms.TextBox Hour_textbox;
+        private System.Windows.Forms.TextBox Sec_textbox;
+        private System.Windows.Forms.TextBox Minute_textbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

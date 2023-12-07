@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,12 @@ namespace timer10
 {
     public partial class Timer : Form
     {
+        bool flag = false;
+        int time = 0;      // 기본설정값
+        int set_time = 0; // 사용자설정값 (설정안했을시, 기본설정값과 동일하게 설정)
+        SoundPlayer player = new SoundPlayer(System.Environment.CurrentDirectory + @"\sunflower-street-drumloop-85bpm-163900.wav");
+
+
         public Timer()
         {
             InitializeComponent();
@@ -38,6 +45,9 @@ namespace timer10
 
 
                 }
-        }   }
+                time--;
+
+            }
+        }
     }
 }

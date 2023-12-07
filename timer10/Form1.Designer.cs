@@ -133,6 +133,7 @@
             this.Set_button.TabIndex = 9;
             this.Set_button.Text = "Set";
             this.Set_button.UseVisualStyleBackColor = true;
+            this.Set_button.Click += new System.EventHandler(this.Set_button_Click);
             // 
             // Reset_button
             // 

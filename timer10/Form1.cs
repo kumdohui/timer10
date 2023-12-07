@@ -32,14 +32,14 @@ namespace timer10
             Sec_textbox.Text = (time % 60).ToString();
             if (time == 0)
             {
-                
+
                 timer1.Stop();
                 Start_stop_button.Text = "Start";
                 flag = false;
 
                 time = set_time;
 
-                    // 비동기적으로 사운드 재생
+                // 비동기적으로 사운드 재생
                 await PlaySoundAsync();
                 MessageBox.Show("타임오버!");
 
@@ -78,6 +78,38 @@ namespace timer10
             time = set_time;
 
         }
-    }
+
+        private void Set_button_Click(object sender, EventArgs e)
+        {
+            int i = 0, j = 0, k = 0;
+            try
+            {
+                if (!int.TryParse(Hour_textbox.Text, out i) ||
+                    !int.TryParse(Minute_textbox.Text, out j) ||
+                    !int.TryParse(Sec_textbox.Text, out k))
+                {
+                    MessageBox.Show("숫자만 입력해 주세요", "Warning !", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (Convert.ToInt32(Hour_textbox.Text) < 0 ||
+                    Convert.ToInt32(Minute_textbox.Text) < 0 ||
+                    Convert.ToInt32(Sec_textbox.Text) < 0)
+                    {
+                        MessageBox.Show("음수는 입력하지 말아주세요", "Warning !", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        set_time = Convert.ToInt32(Hour_textbox.Text) * 3600 + Convert.ToInt32(Minute_textbox.Text) * 60 + Convert.ToInt32(Sec_textbox.Text);
+                        if (set_time == 0)
+                        {
+                            MessageBox.Show("입력값이 없습니다 .입력해 주세요", "Warning !", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                        }
+
+                    }
+                }
+            }
+        }
+    } 
 }
 

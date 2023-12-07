@@ -1,0 +1,5 @@
+C:\Users\NT911S5K\source\repos\timer10\timer10\obj\Debug\timer10.csproj.AssemblyReference.cache
+C:\Users\NT911S5K\source\repos\timer10\timer10\obj\Debug\timer10.Timer.resources
+C:\Users\NT911S5K\source\repos\timer10\timer10\obj\Debug\timer10.Properties.Resources.resources
+C:\Users\NT911S5K\source\repos\timer10\timer10\obj\Debug\timer10.csproj.GenerateResource.cache
+C:\Users\NT911S5K\source\repos\timer10\timer10\obj\Debug\timer10.csproj.CoreCompileInputs.cache
